@@ -7,6 +7,7 @@ html, body {
     font-weight: 400;
     background-color: #f0f0f0;
     color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -15,15 +16,17 @@ body {
     background-image: url('resources/desktop.jpg'); /* Default background image */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh; /* Ensure body takes at least full viewport height */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+
+
 header {
     background-color: rgba(255, 255, 255, 0.7);
     color: black;
-    padding: 1em;
+    padding: 0.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +85,7 @@ footer {
     background-color: rgba(51, 51, 51, 0.7);
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 0.1em 0;
     width: 100%;
     margin-top: auto; /* Push footer to the bottom */
     flex-shrink: 0; /* Prevent footer from shrinking */
@@ -100,6 +103,52 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+.project-container {
+    padding: 1.25em;
+    text-align: center; /* Center items horizontally */
+    border-radius: 0.625em;
+}
+
+.project-item {
+    width: 50vw;
+    margin: 0 auto 1.25em; /* Center items horizontally and add bottom margin */
+    display: flex; /* Change to flex */
+    flex-direction: column; /* Stack children vertically */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    border-radius: 0.625em;
+}
+
+.project-title {
+    align-self: center; /* Center the title */
+}
+
+.project-setup {
+    display: flex; /* Use flex for setup */
+    justify-content: center; /* Center the setup items */
+    gap: 1em; /* Add gap between demo and description */
+}
+
+.project-description,
+.project-demo {
+    width: 45%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.project-demo img {
+    width: 100%; /* Adjust width as needed */
+    height: auto;
+    display: block; /* Ensure proper block display */
+    margin-bottom: 1.25em;
+}
+
+.project-button {
+    text-align: center; /* Center the button */
+    margin-top: 1em; /* Add space above the button */
+}
+
+
 
 /* Responsive styles */
 @media (max-width: 1024px) {

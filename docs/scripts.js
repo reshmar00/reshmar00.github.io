@@ -1,21 +1,27 @@
-document.getElementById('actionButton').addEventListener('click', function() {
-    alert('Button clicked!');
-});
+document.addEventListener('DOMContentLoaded', function() {
+    function redirectToGitHub(url) {
+        window.location.href = url;
+    }
 
-// Function to redirect to GitHub repository
-function redirectToGitHub(url) {
-    window.location.href = url; // Redirect to the specified URL
-}
+    const button1 = document.getElementById('gitCode1Button');
+    const button2 = document.getElementById('gitCode2Button');
+    const button3 = document.getElementById('gitCode3Button');
 
-// Add event listeners to the buttons
-document.getElementById('gitCode1Button').addEventListener('click', function() {
-    redirectToGitHub('https://github.com/reshmar00/appleTreeGameSFML'); // Redirect to GitHub repository
-});
+    if (button1) {
+        button1.addEventListener('click', function() {
+            redirectToGitHub('https://github.com/reshmar00/appleTreeGameSFML');
+        });
+    }
 
-document.getElementById('gitCode2Button').addEventListener('click', function() {
-    redirectToGitHub('https://github.com/MikeTJohnson/appletreeGame'); // Redirect to GitHub repository
-});
+    if (button2) {
+        button2.addEventListener('click', function() {
+            redirectToGitHub('https://github.com/MikeTJohnson/appletreeGame');
+        });
+    }
 
-document.getElementById('gitCode3Button').addEventListener('click', function() {
-    redirectToGitHub('https://github.com/MikeTJohnson/appletreeGame'); // Redirect to GitHub repository
+    if (button3) {
+        button3.addEventListener('click', function() {
+            redirectToGitHub('https://github.com/MikeTJohnson/appletreeGame');
+        });
+    }
 });

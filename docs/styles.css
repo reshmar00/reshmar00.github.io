@@ -1,15 +1,25 @@
 /* Basic styles for all devices */
-body {
-    font-family: 'Montserrat', sans-serif;
+html, body {
+    height: 100%; /* Make html and body take full height */
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
     background-color: #f0f0f0;
     color: #333;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url('resources/desktop.jpg'); /* Default background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 header {
-    background-color: #9E2D9A;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: black;
     padding: 1em;
     display: flex;
     justify-content: space-between;
@@ -17,17 +27,24 @@ header {
 }
 
 .logo img {
-    height: 40px; /* Adjust height as needed */
+    height: auto;
+    width: 100%;
+    max-height: 100px; /* Adjust max height as needed to fit within the header */
+    max-width: 100px; /* Ensure it fits within the header and maintains aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
 }
 
 nav a {
-    color: white;
+    color: black; /* Adjust text color to match new header background */
     text-decoration: none;
     padding: 10px 20px;
+    font-size: 1.2em; /* Make the font size larger */
+    font-weight: bold; /* Make the text bold */
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Add a subtle hover effect */
+    /* text-decoration: underline; Add underline on hover */
+    background-color: rgba(0, 0, 0, 0.1); /*Optional: Add a subtle background color on hover*/
 }
 
 .highlighted-text {
@@ -38,6 +55,7 @@ nav a:hover {
 
 main {
     padding: 1em;
+    flex: 1; /* Allow main content to grow and take available space */
 }
 
 button {
@@ -53,13 +71,12 @@ button:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: rgba(51, 51, 51, 0.7);
     color: white;
     text-align: center;
     padding: 1em 0;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 footer a {
@@ -73,7 +90,17 @@ footer a:hover {
 }
 
 /* Responsive styles */
+@media (max-width: 1024px) {
+    body {
+        background-image: url('resources/tablet.jpg'); /* Background image for tablets */
+    }
+}
+
 @media (max-width: 600px) {
+    body {
+        background-image: url('resources/phone.jpg'); /* Background image for phones */
+    }
+
     header {
         flex-direction: column;
         align-items: center;

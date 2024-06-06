@@ -9,7 +9,7 @@ function redirectToGitHub(url) {
 
 // Add event listeners to the buttons
 document.getElementById('gitCode1Button').addEventListener('click', function() {
-    redirectToGitHub('https://github.com/MikeTJohnson/appletreeGame'); // Redirect to GitHub repository
+    redirectToGitHub('https://github.com/reshmar00/appleTreeGameSFML'); // Redirect to GitHub repository
 });
 
 document.getElementById('gitCode2Button').addEventListener('click', function() {

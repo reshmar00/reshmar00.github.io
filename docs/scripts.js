@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (button2) {
         button2.addEventListener('click', function() {
-            redirectToGitHub('https://github.com/MikeTJohnson/appletreeGame');
+            redirectToGitHub('https://github.com/reshmar00/ChatServer');
         });
     }
 

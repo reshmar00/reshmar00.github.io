@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     function redirectToGitHub(url) {
-        window.location.href = url;
+        window.open(url, '_blank');
     }
 
     const button1 = document.getElementById('gitCode1Button');

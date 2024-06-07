@@ -92,6 +92,38 @@ main {
     box-sizing: border-box;
 }
 
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.github-card, .linkedin-card, .email-card {
+    max-width: 17em;
+    height: auto;
+}
+
+@media screen and (max-width: 64em) {
+    .github-card, .linkedin-card, .email-card {
+        max-width: 10em;
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    .github-card, .linkedin-card, .email-card {
+        max-width: 6em;
+    }
+}
+
 .highlighted-text {
     background-color: rgba(218, 112, 214, 00);
     color: black;
@@ -296,6 +328,32 @@ footer a:hover {
 .project-button {
     text-align: center;
     margin-top: 1em;
+}
+
+/* Infographic */
+.infographic {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1920px) {
+    .infographic {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .infographic {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .infographic {
+        max-width: 100%;
+    }
 }
 
 

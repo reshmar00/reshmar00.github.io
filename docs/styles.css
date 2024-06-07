@@ -49,7 +49,13 @@ nav a {
 }
 
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Optional: Add a subtle background color on hover */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.contact-button, .about-button, .home-button {
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 0.625em;
 }
 
 .resume-button {
@@ -73,16 +79,62 @@ nav a:hover {
     50% { background-color: #FFD700; }
 }
 
-.highlighted-text {
-    text-align: center;
-    background-color: #FFFFFF; /* Yellow highlight color */
-    padding: 1em;
-}
-
 main {
     padding: 1em;
     flex: 1; /* Allow main content to grow and take available space */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.highlighted-text {
+    background-color: rgba(218, 112, 214, 00);
+    padding-right: 9em;
+    padding: 1em;
+    display: flex;
+    width: 50vw; /* Adjust the width of the container */
+    border-radius: 4em;
+    align-self: center;
+    justify-self: center;
+    position: relative; /* Add position relative */
+    margin: 0 auto; /* Center the container on the page */
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.2em; /* Increase font size */
+}
+
+.left-content {
+    flex: 0 0 auto; /* Don't allow left content to grow */
+    width: auto; /* Allow content to determine width */
+    padding-right: 4em; /* Add padding to the right */
+    margin-right: 1em; /* Add margin to create a gap */
+}
+
+.profile-picture {
+    position: absolute; /* Position the picture absolutely within its container */
+    left: 0; /* Align the picture to the left edge */
+    top: 50%; /* Align the picture vertically in the middle */
+    transform: translateY(-50%); /* Adjust vertical positioning */
+}
+
+.profile-picture img {
+    width: 14vw; /* Adjust the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the image round */
+    border: 0.2em outset #6900a3; /* Add border with the specified color */
+}
+
+.right-content {
+    flex: 1; /* Allow right content to grow */
+    text-align: left; /* Align text to the left */
+    padding-left: 7em; /* Add padding to the left */
+    margin-top: -1em; /* Reduce top padding */
+    margin-bottom: -1em; /* Reduce bottom padding */
+}
+
+.highlight {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2em;
 }
 
 button {

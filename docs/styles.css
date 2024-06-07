@@ -21,10 +21,8 @@ body {
     box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-
-
 header {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 215, 0, 0.8);
     color: black;
     padding: 0.5em;
     display: flex;
@@ -36,27 +34,48 @@ header {
 .logo img {
     height: auto;
     width: 100%;
-    max-height: 6.25em; /* Converted from 100px */
-    max-width: 6.25em; /* Converted from 100px */
-    object-fit: contain; /* Ensure the entire image is visible */
+    padding-left: 0.8em;
+    max-height: 6.25em;
+    max-width: 6.25em;
+    object-fit: contain;
 }
 
 nav a {
     color: black;
     text-decoration: none;
-    padding: 0.625em 1.25em; /* Converted from 10px 20px */
+    padding: 0.625em 1.25em;
     font-size: 1.2em;
     font-weight: 600;
 }
 
 nav a:hover {
-    /* text-decoration: underline; Add underline on hover */
     background-color: rgba(0, 0, 0, 0.1); /* Optional: Add a subtle background color on hover */
+}
+
+.resume-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 0.625em 1.25em;
+    cursor: pointer;
+    border-radius: 0.625em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.resume-button.flash {
+    animation: flash-yellow 1s 3;
+}
+
+@keyframes flash-yellow {
+    0%, 100% { background-color: transparent; }
+    50% { background-color: #FFD700; }
 }
 
 .highlighted-text {
     text-align: center;
-    background-color: #FFD700; /* Yellow highlight color */
+    background-color: #FFFFFF; /* Yellow highlight color */
     padding: 1em;
 }
 
@@ -70,9 +89,9 @@ button {
     background-color: #FFBF00;
     color: black;
     border: none;
-    padding: 0.625em 1.25em; /* Converted from 10px 20px */
+    padding: 0.625em 1.25em;
     cursor: pointer;
-    border-radius: 0.625em; /* Converted from 10px */
+    border-radius: 0.625em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
 }
@@ -97,7 +116,7 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
-    margin: 0 0.625em; /* Converted from 0 10px */
+    margin: 0 0.625em;
 }
 
 footer a:hover {
@@ -126,8 +145,9 @@ footer a:hover {
 
 .project-setup {
     display: flex; /* Use flex for setup */
-    justify-content: center; /* Center the setup items */
-    gap: 1em; /* Add gap between demo and description */
+    justify-content: center; /* Center the setup items horizontally */
+    align-items: center; /* Center the setup items vertically */
+    gap: 2em; /* Add gap between demo and description */
 }
 
 .project-description,

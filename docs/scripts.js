@@ -24,4 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
             redirectToGitHub('https://github.com/reshmar00/Unix_Shell');
         });
     }
+
+    const resumeButton = document.getElementById('resumeLink');
+    resumeButton.classList.add('flash');
+    setTimeout(function() {
+        resumeButton.classList.remove('flash');
+    }, 3000); // Adjust timing according to your preference
 });

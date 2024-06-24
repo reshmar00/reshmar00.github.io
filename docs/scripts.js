@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (button4) {
+        button3.addEventListener('click', function() {
+            redirectToGitHub('https://github.com/reshmar00/SVM-vs-kNN-Classification');
+        });
+    }
+
     const resumeButton = document.getElementById('resumeLink');
     resumeButton.classList.add('flash');
     setTimeout(function() {

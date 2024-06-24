@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const button1 = document.getElementById('gitCode1Button');
     const button2 = document.getElementById('gitCode2Button');
     const button3 = document.getElementById('gitCode3Button');
+    const button4 = document.getElementById('gitCode4Button');
 
     if (button1) {
         button1.addEventListener('click', function() {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (button4) {
-        button3.addEventListener('click', function() {
+        button4.addEventListener('click', function() {
             redirectToGitHub('https://github.com/reshmar00/SVM-vs-kNN-Classification');
         });
     }

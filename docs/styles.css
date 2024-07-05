@@ -1,4 +1,9 @@
 /* Basic styles for all devices */
+
+html{
+    scroll-behavior: smooth;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -42,7 +47,10 @@ header {
 
 nav {
     display: flex;
-    flex-grow: 0.5;
+    justify-content: space-around;
+    align-self: auto;
+    align-items: center;
+    /* flex-grow: 0.25; */
 }
 
 nav a {
@@ -51,7 +59,6 @@ nav a {
     padding: 0.625em 1.25em;
     font-size: 1.2em;
     font-weight: 600;
-    flex-grow: 1;
     text-align: center;
 }
 
@@ -59,7 +66,7 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.contact-button, .about-button, .home-button {
+.contact-button, .about-button, .home-button, .project-button {
     background-color: transparent;
     cursor: pointer;
     border-radius: 0.625em;

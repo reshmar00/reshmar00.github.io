@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (button1) {
         button1.addEventListener('click', function() {
-            redirectToGitHub('https://github.com/reshmar00/twaddle');
+            redirectToGitHub('https://github.com/reshmar00/recipe-sharing-website');
         });
     }
 
     if (button2) {
         button2.addEventListener('click', function() {
-            redirectToGitHub('https://github.com/reshmar00/automated-network-inventory');
+            redirectToGitHub('https://github.com/reshmar00/twaddle');
         });
     }
 
@@ -54,10 +54,4 @@ document.addEventListener('DOMContentLoaded', function() {
             redirectToGitHub('https://github.com/reshmar00/SVM-vs-kNN-Classification');
         });
     }
-
-    // const resumeButton = document.getElementById('resumeLink');
-    // resumeButton.classList.add('flash');
-    // setTimeout(function() {
-    //     resumeButton.classList.remove('flash');
-    // }, 3000); // Adjust timing according to your preference
 });

@@ -8,9 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     </style>
+    <script>
+        new WOW().init();
+    </script>
 </head>
 <body>
     <header>
@@ -23,17 +30,17 @@
             <a class="contact-button" href="#contact-info">Contact</a>
             <a class="projects-button" href="projects.html">Projects</a>
             <a class="blog-button" href="blog.html">Blog</a>
-            <a id="resumeLink" class="resume-button" href="resources/Reshma-Raghavan_Resume2024.pdf" download target="_blank">Download Resume</a>
+            <a id="resume-button" class="animate__animated animate__heartBeat" href="resources/Reshma-Raghavan_Resume2024.pdf" download target="_blank">Download Resume</a>
         </nav>
     </header>
     <main>
-        <div class="highlighted-text">
-            <div class="left-content">
+        <div id="highlighted-text">
+            <div id="left-content">
                 <div class="profile-picture">
                     <img src="resources/headshot-400x400.jpg" alt="Your Photo">
                 </div>
             </div>
-            <div class="right-content">
+            <div id="right-content">
                 <p class="highlight">Reshma Raghavan<br>
                     <img src="resources/flaticon_github.png" alt="GitHub" class="aligned-icon">
                     <a href="https://bit.ly/3S3MQ70" class="no-link-style">reshmar00</a>
@@ -41,55 +48,55 @@
             </div>
         </div>
         <!-- New div for project container -->
-        <div class="project-container">
+        <div id="project-container">
             <!-- First project item -->
-            <div class="project-item">
-                <div class="project-title">
+            <div id="project-item">
+                <div id="project-title">
                     <h2>Twaddle</h2>
                 </div>
-                <div class = "project-setup">
-                    <div class="project-demo">
+                <div id = "project-setup">
+                    <div id="project-demo">
                         <img src="resources/twaddle-demo.gif" alt="Game Demo">
                     </div>
-                    <div class="project-description">
+                    <div id="project-description">
                         <p>Twaddle is a fun web app that utilizes Node.js functionality for uploading files, sending emails, and emitting events. This project demonstrates various features including file upload, email sending, and event handling within a simple HTML/CSS/JS web interface.</p>
                     </div>
                 </div>
-                <div class="project-button">
+                <div id="project-button">
                     <button id="gitCode1Button" target="_blank">CODE</button>
                 </div>
             </div>
             <!-- Second project item -->
-            <div class="project-item">
-                <div class="project-title">
+            <div id="project-item">
+                <div id="project-title">
                     <h2>Automated Network Inventory</h2>
                 </div>
-                <div class = "project-setup">
-                    <div class="project-demo">
+                <div id = "project-setup">
+                    <div id="project-demo">
                         <img src="resources/chatServerDemo.gif" alt="Chat Server Demo">
                     </div>
-                    <div class="project-description">
+                    <div id="project-description">
                         <p>Created a Slack clone (chat app) that allows users to enter a chat room and send messages. Includes full-stack development: frontend elements that use HTML, CSS, and JavaScript, and backend elements in Java that facilate communication over web sockets. Developed my own web server in Java as part of this project.</p>
                     </div>
                 </div>
-                <div class="project-button">
+                <div id="project-button">
                     <button id="gitCode2Button" target="_blank">CODE</button>
                 </div>
             </div>
             <!-- Third project item -->
-            <div class="project-item">
-                <div class="project-title">
+            <div id="project-item">
+                <div id="project-title">
                     <h2>Solar Water Heater</h2>
                 </div>
-                <div class = "project-setup">
+                <div id = "project-setup">
                     <div class="project-demo">
                         <img src="resources/unixShellDemo.gif" alt="Unix Shell Demo">
                     </div>
-                    <div class="project-description">
+                    <div id="project-description">
                         <p>This project is a custom Unix shell implementation developed in C++, drawing inspiration from well-known environments like bash and zsh. Utilizing POSIX system calls, the shell can interpret lines of input as individual user commands, proficiently managing operations such as ls, cat someFile, and echo hello world. Beyond this, the shell is equipped with I/O redirection, piping, and offers a smooth user experience with features like tab completion.</p>
                     </div>
                 </div>
-                <div class="project-button">
+                <div id="project-button">
                     <button id="gitCode3Button" target="_blank">CODE</button>
                 </div>
             </div>

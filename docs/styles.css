@@ -72,7 +72,7 @@ nav a:hover {
     border-radius: 0.625em;
 }
 
-.resume-button {
+#resume-button {
     background-color: transparent;
     color: black;
     border: none;
@@ -82,10 +82,6 @@ nav a:hover {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-decoration: none;
-}
-
-.resume-button.flash {
-    animation: flash-yellow 1s 3;
 }
 
 @keyframes flash-yellow {
@@ -131,7 +127,7 @@ main {
     }
 }
 
-.highlighted-text {
+#highlighted-text {
     background-color: rgba(218, 112, 214, 00);
     color: black;
     padding-right: 9em;
@@ -212,7 +208,7 @@ main {
     margin-bottom: 0.1em;
 }
 
-.left-content {
+#left-content {
     flex: 0 0 auto;
     width: auto;
     padding-right: 2em;
@@ -231,7 +227,7 @@ main {
     border: 0.2em outset #6900a3;
 }
 
-.right-content {
+#right-content {
     flex: 1;
     text-align: left;
     padding-left: 3em;
@@ -285,13 +281,13 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.project-container {
+#project-container {
     padding: 1.25em;
     text-align: center;
     border-radius: 0.625em;
 }
 
-.project-item {
+#project-item {
     width: 50vw;
     margin: 0 auto 1.25em;
     display: flex;
@@ -301,31 +297,31 @@ footer a:hover {
     border-radius: 0.625em;
 }
 
-.project-title {
+#project-title {
     align-self: center;
 }
 
-.project-title h2 {
+#project-title h2 {
     font-size: 1.5em;
 }
 
-.project-setup {
+#project-setup {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2em;
 }
-.project-description{
+#project-description{
     font-size: 1em;
 }
 
-.project-description,
-.project-demo {
+#project-description,
+#project-demo {
     width: 45%;
     text-align: left;
 }
 
-.project-demo img {
+#project-demo img {
     width: 100%;
     height: auto;
     display: block;
@@ -338,7 +334,7 @@ footer a:hover {
 }
 
 /* Infographic */
-.infographic {
+#infographic {
     max-width: 100%;
     height: auto;
     display: block;
@@ -408,7 +404,7 @@ footer a:hover {
         background-color: rgba(0, 0, 0, 0.1);
     }
 
-    .resume-button {
+    #resume-button {
         padding: 0.625em 1.25em;
         font-size: 1em;
     }
@@ -491,7 +487,7 @@ footer a:hover {
         padding: 0;
     }
 
-    .resume-button {
+    #resume-button {
         padding: 0;
         font-size: 0.7em;
     }

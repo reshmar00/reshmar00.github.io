@@ -61,7 +61,7 @@ main {
   max-width: 70em;
   width: 90%;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.8); /* Translucent background */
+  background-color: rgba(255, 255, 255, 0.7); /* Translucent background */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -96,7 +96,7 @@ main {
 }
 
 #project-item {
-  background-color: rgba(255, 255, 255, 0.9); /* Translucent inner div */
+  background-color: rgba(255, 245, 238, 0.9);
   border-radius: 10px;
   margin: 20px 0;
   padding: 20px;

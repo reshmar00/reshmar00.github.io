@@ -33,9 +33,9 @@ export default function Header() {
           <Link href="/blog">
             <Text mx="1em" fontWeight="bold" color="#333">Blog</Text>
           </Link>
-          <Link href="public/resources/Reshma-Raghavan_Resume.pdf">
+          <a href="/resources/Reshma-Raghavan_Resume.pdf" download>
             <Text mx="1em" fontWeight="bold" color="#333">Download Resume</Text>
-          </Link>
+          </a>
         </Flex>
       </Flex>
     </Box>

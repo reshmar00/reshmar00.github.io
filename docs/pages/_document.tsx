@@ -1,45 +1,16 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import { CacheProvider } from '@emotion/react';
-import createEmotionServer from '@emotion/server/create-instance';
-import createCache from '@emotion/cache';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-const key = 'custom';
-const cache = createCache({ key });
-const { extractCritical } = createEmotionServer(cache);
-
-export default class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const originalRenderPage = ctx.renderPage;
-
-    ctx.renderPage = () =>
-      originalRenderPage({
-        enhanceApp: (App) => (props) => (
-          <CacheProvider value={cache}>
-            <App {...props} />
-          </CacheProvider>
-        ),
-      });
-
-    const initialProps = await Document.getInitialProps(ctx);
-    const styles = extractCritical(initialProps.html);
-    return {
-      ...initialProps,
-      styles: (
-        <>
-          {initialProps.styles}
-          <style
-            data-emotion={`${key} ${styles.ids.join(' ')}`}
-            dangerouslySetInnerHTML={{ __html: styles.css }}
-          />
-        </>
-      ),
-    };
-  }
-
+class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="manifest" href="/site.webmanifest" />
+        </Head>
         <body>
           <Main />
           <NextScript />
@@ -48,3 +19,5 @@ export default class MyDocument extends Document {
     );
   }
 }
+
+export default MyDocument;

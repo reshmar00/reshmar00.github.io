@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import { ChakraProvider, CSSReset, extendTheme, Box } from '@chakra-ui/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Layout from './components/Layout';
 import { Raleway } from 'next/font/google';
 
 const raleway = Raleway({
@@ -36,9 +37,11 @@ function ReshmaPortfolio({ Component, pageProps }: AppProps) {
         boxSizing="border-box"
       >
         <Header />
-        <main className={raleway.className}>
-          <Component {...pageProps} />
-        </main>
+          <Layout>
+            <main className={raleway.className}>
+              <Component {...pageProps} />
+            </main>
+          </Layout>
         <Footer />
       </Box>
     </ChakraProvider>

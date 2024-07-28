@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
-import { ChakraProvider, CSSReset, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider, CSSReset, extendTheme, Box } from '@chakra-ui/react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { Raleway } from 'next/font/google';
@@ -25,11 +25,22 @@ function ReshmaPortfolio({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <CSSReset />
-      <Header />
-      <main className={raleway.className}>
-        <Component {...pageProps} />
-      </main>
-      <Footer />
+      <Box
+        bgImage="url('/resources/desktop.jpg')"
+        bgSize="cover"
+        bgPosition="center"
+        bgAttachment="fixed"
+        minH="100vh"
+        display="flex"
+        flexDirection="column"
+        boxSizing="border-box"
+      >
+        <Header />
+        <main className={raleway.className}>
+          <Component {...pageProps} />
+        </main>
+        <Footer />
+      </Box>
     </ChakraProvider>
   );
 }

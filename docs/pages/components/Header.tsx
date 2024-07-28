@@ -17,7 +17,14 @@ export default function Header() {
         <Link href="/" passHref>
           <Image src="/resources/reshma_png.png" alt="Reshma" width={100} height={100} />
         </Link>
-        <Flex as="nav" direction={isMobile ? 'column' : 'row'} align="center">
+        <Flex
+          as="nav"
+          direction={isMobile ? 'column' : 'row'}
+          align="center"
+          justifyContent={isMobile ? 'center' : 'flex-end'}
+          w={isMobile ? '100%' : 'auto'}
+          mt={isMobile ? '1em' : '0'}
+        >
           <Link href="/">
             <Text mx="1em" fontWeight="bold" color="#333">Home</Text>
           </Link>

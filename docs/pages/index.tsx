@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Image from 'next/image';
 import { Box, Button, Text, Link, VStack } from '@chakra-ui/react';
 

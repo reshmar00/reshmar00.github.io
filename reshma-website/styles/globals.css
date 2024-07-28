@@ -69,7 +69,7 @@ main {
 
 #highlighted-text {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 40px;
 }
@@ -80,8 +80,8 @@ main {
   height: 150px;
 }
 
-#right-content {
-  margin-left: 20px;
+#left-content, #right-content {
+  margin: 0 10px;
 }
 
 .highlight {
